@@ -1,0 +1,11 @@
+<header id='main'>
+	<h1>Gallery App</h1>
+	<% if current_user %>
+		<%= "Logged In as #{current_user.email}" %>
+		<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+
+	<% else %>
+		<%= link_to 'Sign In', new_user_session_path %>
+	<% end %>
+</header>
+<hr />

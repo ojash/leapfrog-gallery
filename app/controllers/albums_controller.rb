@@ -1,10 +1,12 @@
 class AlbumsController < ApplicationController
   before_action :set_album, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
   # GET /albums
   # GET /albums.json
   def index
-    @albums = Album.all
+    # @albums = Album.all
+    #@albums = Album.where('user_id',current_user)
+    @albums = Album.find_all_by_user_id(current_user)
   end
 
   # GET /albums/1
