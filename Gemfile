@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-
+gem 'carrierwave'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'mysql2'
@@ -13,7 +13,7 @@ group :production do
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-
+gem 'bootstrap-sass', '~> 2.3.2.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -44,6 +44,10 @@ group :test do
 end
 
 gem 'devise'
+#gem 'rmagick'
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
