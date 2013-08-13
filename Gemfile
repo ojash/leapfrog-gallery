@@ -44,7 +44,7 @@ group :test do
 end
 
 gem 'devise'
-#gem 'rmagick'
+gem 'rmagick'
 
 
 

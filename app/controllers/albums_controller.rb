@@ -32,6 +32,9 @@ class AlbumsController < ApplicationController
     @album = current_user.albums.build(album_params)
     respond_to do |format|
       if @album.save
+
+        AlbumMailer.notify_user(@album).deliver
+        
         format.html { redirect_to @album, notice: 'Album was successfully created.' }
         format.json { render action: 'show', status: :created, location: @album }
       else
