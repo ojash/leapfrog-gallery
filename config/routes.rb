@@ -1,9 +1,12 @@
 Gallery::Application.routes.draw do
+  
   devise_for :users
-  resources :albums
+  resources :albums do
+    resources :photos
+  end
 
-  get "users/index"
-  get "users/show"
+  #get "users/index"
+  #get "users/show"
 
   #root 'users#index'
   root :to => "albums#index"

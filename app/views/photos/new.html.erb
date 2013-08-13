@@ -1,0 +1,15 @@
+<h1>Add photos for: <span style='color:#324354'><%= @album.title %></span></h1>
+
+<%= form_for([@album, @photo]) do |f| %>
+
+	<p><%=f.label :caption %><br>
+	<p><%=f.text_field :caption %></p>
+	
+	<p><%=f.label :description %><br>
+	<p><%=f.text_area :description %></p>
+
+	<p><%=f.label :photo %><br>
+	<p><%=f.file_field :photo %></p>
+
+	<p class="button"><%= f.submit%></p>
+<% end %>
